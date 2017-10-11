@@ -1,0 +1,20 @@
+server:
+  port: 7902
+spring:
+  datasource:
+    platform: H2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+  jpa:
+    generate-ddl: false
+    database: MYSQL
+    show-sql: true
+  #Hibernate ddl auto (validate|create|create-drop|update)
+    hibernate:
+      ddl-auto: none
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
